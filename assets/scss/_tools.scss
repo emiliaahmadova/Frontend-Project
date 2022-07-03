@@ -1,0 +1,112 @@
+.mobile-active {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .mobile-menu {
+    visibility: visible;
+    .menu-overlay {
+      opacity: 1;
+      visibility: visible;
+    }
+    .menu-content {
+      transform: translate(0);
+      transition: all 0.7s ease-out;
+    }
+  }
+}
+.btn-usual {
+  color: #fff;
+  width: 160px;
+  height: 55px;
+  display: block;
+  overflow: hidden;
+  font-weight: 700;
+  line-height: 55px;
+  border-radius: 40px;
+  background-color: $color-orange;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    &::after {
+      height: 100%;
+      width: 150%;
+    }
+  }
+  &::after {
+    top: 0;
+    width: 0;
+    left: -40%;
+    content: "";
+    z-index: -1;
+    height: 100%;
+    position: absolute;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    background-color: #0000fe;
+  }
+}
+
+.section-title {
+  position: relative;
+  max-width: 590px;
+  margin: 0 auto;
+  text-align: center;
+  .background-title {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    opacity: 0.04;
+    color: #53536c;
+    line-height: 1;
+    font-size: 100px;
+    font-weight: 900;
+    margin-bottom: 0;
+    text-align: center;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .section-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: $color-blue;
+    padding: 0px 15px;
+    position: relative;
+  }
+  .section-bigtitle {
+    color: #000;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.125;
+    padding: 15px 0px 20px;
+  }
+}
+
+.pl-40 {
+  padding-left: 40px;
+}
+
+@media only screen and(max-width:560px) {
+  .section-title {
+    .background-title {
+      font-size: 77px;
+    }
+    .section-bigtitle {
+      font-size: 30px;
+    }
+  }
+}
+@media only screen and(max-width:396px) {
+  .section-title {
+    .background-title {
+      font-size: 50px;
+    }
+    .section-bigtitle {
+      font-size: 24px;
+    }
+  }
+}

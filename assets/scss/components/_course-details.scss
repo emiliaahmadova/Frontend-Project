@@ -1,0 +1,562 @@
+#course-details {
+  padding: 80px 0;
+  background-color: $bg-gray;
+  .course-details-content {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .tabs {
+      background-color: white;
+      padding: 30px 35px;
+
+      .tabs-buttons {
+        background-color: $bg-gray;
+        margin-bottom: 25px;
+        ul {
+          justify-content: space-between;
+          border: none;
+          li {
+            a {
+              border: none;
+              background-color: transparent;
+              color: #000000;
+              font-size: 18px;
+              font-weight: 700;
+              padding: 25px 30px;
+              border-radius: 0;
+            }
+            a.active {
+              background-color: $color-orange;
+              color: white;
+            }
+          }
+        }
+      }
+      .tab-content {
+        #overview {
+          h4 {
+            color: #000;
+            font-size: 24px;
+            font-weight: 700;
+            padding-bottom: 10px;
+            font-family: $secondary-font;
+          }
+          .overview-text {
+            margin-bottom: 35px;
+            p {
+              color: #555555;
+              font-size: 16px;
+              line-height: 1.625;
+            }
+          }
+          .overview-content {
+            .icon-title {
+              //   display: flex;
+              img {
+                margin-right: 10px;
+              }
+              h5 {
+                display: inline-block;
+                font-size: 20px;
+                font-weight: 500;
+                font-family: $secondary-font;
+                a {
+                  color: #000000;
+                }
+              }
+            }
+            p {
+              color: #555555;
+              font-size: 15px;
+              line-height: 1.6;
+              max-width: 330px;
+            }
+            .certificate {
+              p {
+                margin-bottom: 0;
+              }
+              a.link {
+                color: #000;
+                font-weight: 700;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        #curriculum {
+          .curriculum-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            h3 {
+              color: #000;
+              font-size: 24px;
+              font-weight: 700;
+              padding-bottom: 10px;
+            }
+          }
+          .accordion-item {
+            margin-bottom: 10px;
+
+            .accordion-header {
+              background-color: $bg-gray;
+              button {
+                border: none;
+                position: relative;
+                background-color: transparent;
+                width: 100%;
+                padding: 16px 12px 16px 50px;
+                background-color: #f2f2f4;
+                outline: none;
+                .lesson-time {
+                  float: right;
+                  display: flex;
+                  span {
+                    font-weight: 500;
+                    margin-right: 25px;
+                    font-size: 15px;
+                  }
+                }
+                h3 {
+                  color: #000;
+                  float: left;
+                  font-size: 20px;
+                  font-weight: 700;
+                  font-family: $secondary-font;
+                  margin-bottom: 0;
+                }
+                &::after {
+                  top: -10px;
+                  left: 15px;
+                  color: #000;
+                  font-size: 50px;
+                  content: "-";
+                  position: absolute;
+                }
+              }
+              button.collapsed::after {
+                top: 0;
+                content: "+";
+                font-size: 40px;
+              }
+            }
+            .accordion-body {
+              padding: 20px 30px;
+              border: 1px solid #f2f2f4;
+              padding-bottom: 0;
+              ul {
+                li {
+                  display: flex;
+                  justify-content: space-between;
+                  border-bottom: 1px solid #dadada;
+                  margin-bottom: 15px;
+                  padding-bottom: 15px;
+                  .icon-accordion-text {
+                    color: #555555;
+                    i {
+                      font-size: 13px;
+                      margin-right: 10px;
+                    }
+                    a {
+                      color: #555555;
+                    }
+                  }
+                  .time-text {
+                    display: flex;
+                    span {
+                      color: $color-orange;
+                      margin-right: 12px;
+                    }
+                    p {
+                      margin-bottom: 0;
+                    }
+                  }
+                }
+                li:last-child {
+                  margin: 0;
+                  padding: 0;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+        #instructor-details {
+          .instructor-details-content {
+            h3 {
+              font-family: $secondary-font;
+              color: #000;
+              font-size: 24px;
+              font-weight: 700;
+              padding-bottom: 10px;
+            }
+            .btn-instructor {
+              float: right;
+              height: 48px;
+              width: 150px;
+              line-height: 44px;
+              border-radius: 30px;
+              border: 2px solid #0000fe;
+              color: #000;
+              font-weight: 700;
+              text-align: center;
+            }
+            .teacher-img-text {
+              display: flex;
+              margin-top: 20px;
+              .teacher-img {
+                width: 120px;
+                height: 120px;
+                overflow: hidden;
+                margin-right: 25px;
+                border-radius: 100%;
+              }
+              .teacher-text {
+                padding-top: 15px;
+                h3 {
+                  color: #000;
+                  font-weight: 600;
+                  font-size: 20px;
+                  padding-bottom: 10px;
+                }
+                .stars-rate-review {
+                  display: flex;
+                  margin-bottom: 10px;
+                  ul {
+                    display: flex;
+                    margin-bottom: 0;
+                    li {
+                      color: #ebc90a;
+                      margin-right: 3px;
+                    }
+                    li.unchecked {
+                      color: #d3d3d3;
+                    }
+                  }
+                  .rate {
+                    margin-left: 10px;
+                    margin-right: 5px;
+                    color: #000;
+                    font-weight: 500;
+                  }
+                  .review {
+                    color: #555555;
+                    font-size: 16px;
+                  }
+                }
+                .students {
+                  span {
+                    margin-right: 10px;
+                    color: #555555;
+                    font-size: 16px;
+                    i {
+                      margin-right: 5px;
+                      color: #e3002a;
+                    }
+                  }
+                }
+              }
+            }
+            .instructor-details {
+              margin-top: 25px;
+              p {
+                margin-bottom: 30px;
+                color: #555555;
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        #view-offline {
+          .view-offline-content {
+            h3 {
+              font-family: $secondary-font;
+              color: #000;
+              font-size: 24px;
+              font-weight: 700;
+              padding-bottom: 10px;
+            }
+            p {
+              color: #555555;
+              font-size: 16px;
+              margin-bottom: 0;
+            }
+            .btn-download {
+              color: #fff;
+              font-weight: 700;
+              margin-top: 30px;
+              padding: 15px 30px;
+              border-radius: 40px;
+              display: inline-block;
+              background-color: #ff5520;
+            }
+          }
+        }
+      }
+    }
+  }
+  .course-details-right-side {
+    .details-video {
+      position: relative;
+      margin-bottom: 30px;
+      img {
+        width: 100%;
+      }
+      a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    .right-side-content {
+      overflow: hidden;
+      border-radius: 4px;
+      margin-bottom: 40px;
+      background-color: white;
+      padding: 35px 30px;
+      .pricing {
+        ul {
+          li {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eef1fe;
+            display: flex;
+            justify-content: space-between;
+            span {
+              i {
+                color: #ff5520;
+                margin-right: 7px;
+              }
+            }
+          }
+        }
+        .price {
+          span {
+            float: left;
+            color: #000;
+            font-size: 24px;
+            font-weight: 700;
+            strong {
+              color: $color-orange;
+            }
+          }
+          .btn-buy {
+            color: #fff;
+            width: 75px;
+            height: 30px;
+            float: right;
+            font-size: 15px;
+            margin-top: 5px;
+            font-weight: 700;
+            line-height: 30px;
+            margin-left: 20px;
+            text-align: center;
+            background-color: #ff5520;
+          }
+        }
+      }
+      .recommendation {
+        h3 {
+          color: #000;
+          font-size: 20px;
+        }
+        ul {
+          li:not(:last-child) {
+            border-bottom: 1px solid #eef1fe;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+          }
+          li {
+            display: flex;
+
+            div {
+              display: block;
+              a {
+                color: #000;
+                font-weight: 700;
+                line-height: 1.375;
+                padding-bottom: 3px;
+              }
+              span {
+                display: block;
+                color: #ff5520;
+                font-size: 14px;
+                font-weight: 700;
+              }
+            }
+            .recom-img {
+              margin-right: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 870px) {
+  #course-details {
+    .course-details-content {
+      .tabs {
+        .tab-content {
+          #reviews {
+            .review-content {
+              .add-review {
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//course-details-content-media
+@media only screen and(max-width: 768px) {
+  #course-details {
+    .course-details-content {
+      .tabs {
+        .tabs-buttons {
+          ul {
+            justify-content: flex-start;
+          }
+        }
+        .tab-content {
+          #curriculum {
+            .accordion-item {
+              .accordion-header {
+                button {
+                  text-align: left;
+                  .lesson-time {
+                    float: none;
+                  }
+                  h3 {
+                    float: none;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 630px) {
+  #course-details {
+    .course-details-content {
+      .tabs {
+        .tab-content {
+          #instructor-details {
+            .instructor-details-content {
+              .btn-instructor {
+                display: none;
+              }
+              .teacher-img-text {
+                .teacher-img {
+                  width: 90px;
+                  height: 90px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 448px) {
+  #course-details {
+    .course-details-content {
+      .tabs {
+        .tab-content {
+          #instructor-details {
+            .instructor-details-content {
+              .teacher-img-text {
+                display: block;
+                .teacher-text {
+                  .stars-rate-review {
+                    display: block;
+                    ul {
+                      margin-bottom: 10px;
+                    }
+                    .rate {
+                      margin-left: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and(max-width: 530px) {
+  #course-details {
+    .course-details-content {
+      .tabs {
+        .tabs-buttons {
+          ul {
+            li {
+              a {
+                padding: 10px 15px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .tab-content {
+          #curriculum {
+            .curriculum-header {
+              display: block;
+              margin-bottom: 20px;
+              h3 {
+                margin-bottom: 2px;
+                padding: 0;
+              }
+            }
+            .accordion-item {
+              .accordion-header {
+                button {
+                  padding: 10px 12px 13px 50px;
+                }
+              }
+              .accordion-body {
+                ul {
+                  li {
+                    display: block;
+                    .icon-accordion-text {
+                      margin-bottom: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          #reviews {
+            .review-content {
+              .review-comment {
+                .review-text {
+                  .name-star {
+                    display: block;
+                  }
+                  .btn-reply {
+                    margin-top: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

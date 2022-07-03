@@ -1,0 +1,231 @@
+body {
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+$breadcrumb-divider: (">>");
+.small-title {
+  color: $text-blue;
+}
+.owl-carousel {
+  .owl-item {
+    opacity: 0;
+    transition: opacity 500ms;
+  }
+  .owl-item.active {
+    opacity: 1;
+  }
+  .owl-stage-outer {
+    overflow: visible;
+  }
+  .owl-dots {
+    text-align: center;
+    margin-top: 20px;
+    .owl-dot.active {
+      width: 38px;
+      background-color: #0000fe;
+    }
+    .owl-dot {
+      width: 28px;
+      height: 5px;
+      margin: 0px 5px;
+      cursor: pointer;
+      border-radius: 30%;
+      display: inline-block;
+      background-color: #ececed;
+      transition: 0.3s all ease-in-out;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.scroll-up {
+  position: fixed;
+  right: 15px;
+  bottom: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: #e3002a;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 20;
+  color: #ffffff;
+}
+.bg-gray {
+  background-color: #f2f2f4 !important;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  li {
+    padding: 10px 14px;
+    background-color: white;
+    transition: all 300ms ease-in-out;
+    margin-right: 13px;
+    cursor: pointer;
+    a {
+      color: black;
+      font-size: 18px;
+      font-weight: 700;
+      font-family: $secondary-font;
+      transition: all 300ms ease-in-out;
+    }
+    &:hover {
+      background-color: $color-blue;
+      a {
+        color: white;
+      }
+    }
+  }
+}
+.review-content {
+  padding-bottom: 20px;
+  .review-comment {
+    .review-img {
+      float: left;
+      width: 80px;
+      height: 80px;
+      overflow: hidden;
+      border-radius: 8px;
+      margin-right: 20px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+    .review-text {
+      overflow: hidden;
+      .name-star {
+        display: flex;
+        justify-content: space-between;
+        .stars {
+          ul {
+            display: flex;
+            li {
+              color: #ebc90a;
+              margin-right: 5px;
+            }
+            li.unchecked {
+              color: #d3d3d3;
+            }
+          }
+        }
+        .review-author {
+          margin-bottom: 15px;
+          h3 {
+            color: #000;
+            font-size: 20px;
+            font-weight: 500;
+            padding-bottom: 5px;
+            font-family: $secondary-font;
+            margin-bottom: 0;
+          }
+          span {
+            font-size: 14px;
+            color: #555555;
+          }
+        }
+      }
+
+      p {
+        color: #555555;
+        font-size: 16px;
+      }
+      .btn-reply {
+        color: #fff;
+        height: 40px;
+        width: 100px;
+        font-size: 15px;
+        font-weight: 700;
+        border-radius: 30px;
+        line-height: 40px;
+        display: inline-block;
+        background-color: #ff5520;
+        text-align: center;
+      }
+    }
+  }
+}
+.add-review {
+  padding-top: 30px;
+  position: relative;
+  &::before {
+    top: 0;
+    left: -45px;
+    height: 40px;
+    width: 111%;
+    content: "";
+    position: absolute;
+    background-color: $bg-gray;
+  }
+  h3 {
+    padding-top: 50px;
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    font-family: $secondary-font;
+  }
+  form {
+    input {
+      width: 266px;
+      height: 45px;
+      border: none;
+      padding-left: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      background-color: #efeff0;
+    }
+    textarea {
+      width: 100%;
+      border: none;
+      height: 165px;
+      padding: 15px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      background-color: #efeff0;
+    }
+    button {
+      color: #fff;
+      width: 170px;
+      height: 50px;
+      border: none;
+      font-weight: 700;
+      border-radius: 40px;
+      background-color: #0000fe;
+      outline: none;
+    }
+  }
+}
+
+#loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  width: 100%;
+  background: #fff url("/assets/img/pre.svg") no-repeat center center;
+  height: 100%;
+  overflow: visible;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .container {
+    max-width: 100%;
+  }
+}
